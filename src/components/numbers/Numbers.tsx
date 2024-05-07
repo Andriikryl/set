@@ -4,6 +4,7 @@ import styles from "./style.module.css";
 import { Heading } from "../heading/Heading";
 import { Input } from "../input/Input";
 import Tree from "../tree/Tree";
+import SetsNumber from "./setsNumbers/SetsNumber";
 
 const treeData = [
   {
@@ -44,6 +45,7 @@ export default function Numbers() {
     <section>
       <div className={styles.wrapper}>
         <Heading headingLevel="h1">Numbers</Heading>
+        <SetsNumber />
         <div className={styles.input__box}>
           <Input
             label="Number"
