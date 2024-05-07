@@ -1,0 +1,9 @@
+.description{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 120%;
+    color: var(--black);
+    border-left: 3px solid #ffc300;
+    padding-inline-start: 10px;
+}
