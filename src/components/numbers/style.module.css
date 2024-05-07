@@ -1,0 +1,17 @@
+.input__box{
+    margin-block-end: 20px;
+}
+
+.description{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 127%;
+    color: var(--black);
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
