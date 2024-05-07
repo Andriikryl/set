@@ -5,6 +5,7 @@ import { Heading } from "../heading/Heading";
 import { Input } from "../input/Input";
 import Tree from "../tree/Tree";
 import SetsNumber from "./setsNumbers/SetsNumber";
+import PrimeNumber from "./primeNumber/PrimeNumber";
 
 const treeData = [
   {
@@ -56,6 +57,7 @@ export default function Numbers() {
         </div>
         <p className={styles.description}>{number}</p>
         <Tree treeData={treeData} />
+        <PrimeNumber />
       </div>
     </section>
   );
