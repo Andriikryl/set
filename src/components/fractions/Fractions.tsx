@@ -9,15 +9,16 @@ import { Input } from "../input/Input";
 import { range } from "@/utils/range";
 import clsx from "clsx";
 import { simplify } from "@/utils/simplify";
+import Tree from "../tree/Tree";
+import { generateTreeData } from "@/utils/generateTreeData";
 
 export default function Fractions() {
   const [numeretor, SetNumerator] = useState(3);
   const [deNumeretor, SetDeNumerator] = useState(5);
   const [simpNumeretor, SetSimpNumerator] = useState(6);
   const [simpDeNumeretor, SetSimpDeNumerator] = useState(8);
-  let a = 5;
-  let b = 6;
-  const latexString = `$$\\frac{${a}}{${b}}$$`;
+  const [fuctorNumber, setFuctorNumber] = useState(210);
+
   const fuctionEx = `$$\\frac{${numeretor}}{${deNumeretor}}$$`;
   const fuctionSimpEx = `$$\\frac{${simpNumeretor}}{${simpDeNumeretor}}$$`;
   const simplifiedFraction = simplify(`${simpNumeretor}/${simpDeNumeretor}`);
@@ -27,12 +28,11 @@ export default function Fractions() {
     : `$$\\frac{${simplifiedFraction.split("/")[0]}}{${
         simplifiedFraction.split("/")[1]
       }}$$`;
-
+  const treeData = generateTreeData(fuctorNumber);
   return (
     <section>
       <Heading headingLevel="h3">Fractions</Heading>
       <div className={styles.flow}>
-        <Latex>{latexString}</Latex>
         <Description>
           the number above the bar is called the numerator, and the number below
           the bar is called the denominator.
@@ -116,6 +116,22 @@ export default function Fractions() {
             );
           })}
         </div>
+        <Heading headingLevel="h3">Prime-factored form</Heading>
+        <Description>
+          When a composite number has been written as the product of other
+          natural numbers, we say that it has been factored. For example, 15 can
+          be written as the product of 5 and 3. The numbers 5 and 3 are called
+          factors of 15. When a composite number is written as the product of
+          prime numbers, we say that it is written in prime-factored form.
+        </Description>
+        <Input
+          label="Number"
+          value={fuctorNumber}
+          onChange={(e) => setFuctorNumber(Number(e.target.value))}
+          type="number"
+          min={2}
+        />
+        <Tree treeData={treeData} />
       </div>
     </section>
   );
