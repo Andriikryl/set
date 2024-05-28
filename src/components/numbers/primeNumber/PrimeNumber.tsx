@@ -15,6 +15,7 @@ export default function PrimeNumber() {
   const [endCom, setEndCom] = React.useState(100);
   const primeNumbersInRange = listRange(start, end, "prime");
   const compositNumbersInRange = listRange(startCom, endCom, "composit");
+
   return (
     <div className={styles.prime__box}>
       <div>
