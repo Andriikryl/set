@@ -11,6 +11,7 @@ import clsx from "clsx";
 import { simplify } from "@/utils/simplify";
 import Tree from "../tree/Tree";
 import { generateTreeData } from "@/utils/generateTreeData";
+import MultiplyingFractions from "./multiplyingFractions/MultiplyingFractions";
 
 export default function Fractions() {
   const [numeretor, SetNumerator] = useState(3);
@@ -133,6 +134,7 @@ export default function Fractions() {
         />
         <Tree treeData={treeData} />
       </div>
+      <MultiplyingFractions />
     </section>
   );
 }
