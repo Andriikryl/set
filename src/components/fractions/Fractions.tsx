@@ -12,6 +12,7 @@ import { simplify } from "@/utils/simplify";
 import Tree from "../tree/Tree";
 import { generateTreeData } from "@/utils/generateTreeData";
 import MultiplyingFractions from "./multiplyingFractions/MultiplyingFractions";
+import Proper from "./proper/Proper";
 
 export default function Fractions() {
   const [numeretor, SetNumerator] = useState(3);
@@ -135,6 +136,7 @@ export default function Fractions() {
         <Tree treeData={treeData} />
       </div>
       <MultiplyingFractions />
+      <Proper />
     </section>
   );
 }

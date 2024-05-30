@@ -1,0 +1,15 @@
+.flow{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-block-end: 20px;
+}
+.info{
+    text-align: center;
+    margin-block-end: 20px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 120%;
+    color: tomato;
+}
